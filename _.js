@@ -2,16 +2,12 @@
 const _ = {
   // Clamps number within the inclusive lower and upper bounds.
   clamp(number, lowerBound, upperBound) {
-        let value = Math.max(number, lowerBound);
-        let final = Math.min(value, upperBound);
-        return final;
+    let lowerClampedValue = Math.max(number, lowerBound);
+    let clampedValue = Math.min(lowerClampedValue, upperBound);
+    return clampedValue;
   },
 };
 
-
-
-
-
-
 // Do not write or modify code below this line.
 module.exports = _;
+
