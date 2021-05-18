@@ -2,7 +2,7 @@
 const _ = {
   // Clamps number within the inclusive lower and upper bounds.
     clamp(number, lowerBound, upperBound) {
-        // cheacking if the lowerBound < upperBound
+        // cheacking if the lowerBound > upperBound
         if (lowerBound > upperBound) {
             let temp;
             temp = lowerBound;
