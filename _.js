@@ -27,6 +27,9 @@ const _ = {
         return false;
       }
     },
+    words(str) {
+       return str.split(' ');
+    },
 };
 
 // Do not write or modify code below this line.
