@@ -56,15 +56,22 @@ const _ = {
     }
     return invertedObject;
   },
-    findKey(object, predicateFunction) {
-      for (const key in object) {
-          let value = object[key];
-          let predicateReturnValue = predicateFunction(value);
-          if (predicateReturnValue) {
-              return key;
-          }
+  findKey(object, predicateFunction) {
+    for (const key in object) {
+      let value = object[key];
+      let predicateReturnValue = predicateFunction(value);
+      if (predicateReturnValue) {
+        return key;
       }
-        return undefined;
+    }
+    return undefined;
+  },
+    drop(array, number) {
+        if (number === null || number === undefined) {
+            number = 1;
+        };
+        let droppedArray = array.slice(number);
+        return droppedArray;
   },
 };
 
