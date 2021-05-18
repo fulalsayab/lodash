@@ -44,6 +44,10 @@ const _ = {
       return resultString;
     }
   },
+    has(object, key) {
+        let hasValue =(key in object);
+        return hasValue;
+    },
 };
 
 // Do not write or modify code below this line.
