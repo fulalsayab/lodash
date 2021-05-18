@@ -44,10 +44,18 @@ const _ = {
       return resultString;
     }
   },
-    has(object, key) {
-        let hasValue =(key in object);
-        return hasValue;
-    },
+  has(object, key) {
+    let hasValue = key in object;
+    return hasValue;
+  },
+  invert(object) {
+      let invertedObject = {};
+      for (const key in object) {
+          let originalValue = object[key];
+          invertedObject[originalValue] = key;
+      };
+      return invertedObject;
+  },
 };
 
 // Do not write or modify code below this line.
