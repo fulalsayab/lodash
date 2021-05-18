@@ -66,12 +66,19 @@ const _ = {
     }
     return undefined;
   },
-    drop(array, number) {
-        if (number === null || number === undefined) {
-            number = 1;
-        };
-        let droppedArray = array.slice(number);
-        return droppedArray;
+  drop(array, number) {
+    if (number === null || number === undefined) {
+      number = 1;
+    }
+    let droppedArray = array.slice(number);
+    return droppedArray;
+  },
+  dropWhile(array, predicateFunction) {
+    let dropNumber = array.findIndex((ele, index) => {
+      return !predicateFunction(ele, index, array);
+    });
+    let droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
   },
 };
 
