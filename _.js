@@ -80,6 +80,17 @@ const _ = {
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
   },
+  chunk(array, size) {
+    if (size === null || size === undefined) {
+      size = 1;
+    }
+    let arrayChunks = [];
+    for (let i = 0; i < array.length; i += size) {
+      let arrayChunk = array.slice(i, i + size);
+      arrayChunks.push(arrayChunk);
+    }
+    return arrayChunks;
+  },
 };
 
 // Do not write or modify code below this line.
